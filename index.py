@@ -23,6 +23,20 @@ def after_request(response):
 
 @app.route("/", methods=["POST", "GET"])
 def index():
+    try:
+        if session["log_email"] is not None:
+            return redirect("/gdashboard")
+        else:
+             return render_template('index.html')
+    except:
+       pass
+    try:
+        if session["log_user_email"] is not None:
+            return redirect("/dashboard")
+        else:
+            return render_template('index.html')
+    except:
+        pass
     return render_template("index.html")
 
 @app.route("/login", methods=["POST","GET"])
@@ -37,7 +51,7 @@ def login():
             "password": password
         }
         r2 = requests.post(url=url, data=params)
-        print(r2.text)
+        # print(r2.text)
 
         res = r2.json()
         ev = res['error']
@@ -76,7 +90,7 @@ def login():
                 session['log_user_uhex'] = uhex
                 session['log_user_phone'] = uphone
                 session['log_user_role'] = role
-                print("idr aa gaya")
+
                 return redirect("/dashboard")
 
     try:
@@ -174,7 +188,7 @@ def logout():
         pass
     return render_template('logout.html')
 
-@app.route("/glogoutt")
+@app.route("/glogout")
 def guard_logout():
     try:
         del session['log_email']
@@ -401,7 +415,7 @@ def admin_add():
 
                 for x in temp_pass_list:
                     password = password + x
-                print(password)
+                # print(password)
 
                 # Email Code
                 import smtplib
@@ -427,7 +441,7 @@ def admin_add():
                     smtp_server.login(gmail_user, gmail_password)
                     smtp_server.sendmail(sent_from, to, email_text)
                     smtp_server.close()
-                    print("Email sent successfully!")
+                    # print("Email sent successfully!")
                 except Exception as ex:
                     print("Something went wrong….", ex)
                 message = 'New Password has been sent to your email.'
@@ -440,7 +454,7 @@ def admin_add():
                 }
 
                 r3 = requests.post(url=url3, data=params3)
-                print(r3.text)
+                # print(r3.text)
                 url2 = "https://espnodewebsite.000webhostapp.com/API/signupapi.php"
                 params1 = {
                     'fname': fname,
@@ -454,7 +468,7 @@ def admin_add():
                 }
 
                 rtt55 = requests.post(url=url2, data=params1)
-                print(rtt55.text)
+                # print(rtt55.text)
                 res = rtt55.json()
                 ev = res['error']
                 if not ev:
@@ -555,12 +569,12 @@ def guard_complain():
                     smtp_server.login(gmail_user, gmail_password)
                     smtp_server.sendmail(sent_from, to, email_text)
                     smtp_server.close()
-                    print("Email sent successfully!")
+                    # print("Email sent successfully!")
                 except Exception as ex:
                     print("Something went wrong….", ex)
                 r2 = requests.post(url=url, data=params)
-                print(r2.text)
-                print(params)
+                # print(r2.text)
+                # print(params)
                 res = r2.json()
                 return render_template('guard_form-wizard.html',params=params)
             else:

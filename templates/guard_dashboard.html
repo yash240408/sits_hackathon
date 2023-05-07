@@ -108,7 +108,7 @@
 						<span class="user-icon">
 							<img src="static/vendors/images/photo1.jpg" alt="">
 						</span>
-						<span class="user-name">{{ request.session.log_fname }}</span>
+						<span class="user-name">{{ session.log_fname }}</span>
 					</a>
 					<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
 						<a class="dropdown-item" href="/gprofile"><i class="dw dw-user1"></i> Profile</a>
@@ -231,7 +231,7 @@
 							<span class="micon dw dw-user-13"></span><span class="mtext">Profile</span>
 						</a>
 						<ul class="submenu">
-							<li><a href="gprofile">Profile</a></li>
+							<li><a href="/gprofile">Profile</a></li>
 							<li><a href=" /glogout "> Log Out</a></li>
 						</ul>
 					</li>
@@ -253,7 +253,7 @@
 					</div>
 					<div class="col-md-8">
 						<h4 class="font-20 weight-500 mb-10 text-capitalize">
-							Welcome back <div class="weight-600 font-30 text-blue">{{ request.session.log_fname }} {{ request.session.log_lname }}</div>
+							Welcome back <div class="weight-600 font-30 text-blue">{{ session.log_fname }} {{ session.log_lname }}</div>
 						</h4>
 						<p class="font-18 max-width-600">RAILWAY ACCIDENT PREVENTION</p>
 					</div>

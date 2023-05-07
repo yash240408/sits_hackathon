@@ -7,9 +7,9 @@
 	<title>RAILWAY ACCIDENT PREVENTION ADMIN DASHBOARD | Profile</title>
 
 	<!-- Site favicon -->
-	<link rel="apple-touch-icon" sizes="180x180" href="static/vendors/images/gfgfhff.pngstatic/">
-	<link rel="icon" type="image/png" sizes="32x32" href="static/vendors/images/gfgfhff.pngstatic/">
-	<link rel="icon" type="image/png" sizes="16x16" href="static/vendors/images/gfgfhff.pngstatic/">
+	<link rel="apple-touch-icon" sizes="180x180" href="static/vendors/images/gfgfhff.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="static/vendors/images/gfgfhff.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="static/vendors/images/gfgfhff.png">
 
 	<!-- Mobile Specific Metas -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -17,10 +17,10 @@
 	<!-- Google Font -->
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 	<!-- CSS -->
-	<link rel="stylesheet" type="text/css" href="static/vendors/styles/core.cssstatic/">
-	<link rel="stylesheet" type="text/css" href="static/vendors/styles/icon-font.min.cssstatic/">
-	<link rel="stylesheet" type="text/css" href="static/src/plugins/cropperjs/dist/cropper.cssstatic/">
-	<link rel="stylesheet" type="text/css" href="static/vendors/styles/style.cssstatic/">
+	<link rel="stylesheet" type="text/css" href="static/vendors/styles/core.css">
+	<link rel="stylesheet" type="text/css" href="static/vendors/styles/icon-font.min.css">
+	<link rel="stylesheet" type="text/css" href="static/src/plugins/cropperjs/dist/cropper.css">
+	<link rel="stylesheet" type="text/css" href="static/vendors/styles/style.css">
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-119386393-1"></script>
@@ -35,7 +35,7 @@
 <body>
 	<div class="pre-loader">
 		<div class="pre-loader-box">
-			<div class="loader-logo"><img src="static/vendors/images/gfgfhff.pngstatic/" alt="" type="image/png" width="120px" height="80px"></div>
+			<div class="loader-logo"><img src="static/vendors/images/gfgfhff.png" alt="" type="image/png" width="120px" height="80px"></div>
 			<div class='loader-progress' id="progress_div">
 				<div class='bar' id='bar1'></div>
 			</div>
@@ -99,12 +99,12 @@
 				<div class="dropdown">
 					<a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown">
 						<span class="user-icon">
-							<img src="static/vendors/images/photo1.jpgstatic/" alt="">
+							<img src="static/vendors/images/photo1.jpg" alt="">
 						</span>
-						<span class="user-name">{{ request.session.log_user_fname }}</span>
+						<span class="user-name">{{ session.log_user_fname }}</span>
 					</a>
 					<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-						<a class="dropdown-item" href="profile.htmlstatic/"><i class="dw dw-user1"></i> Profile</a>
+						<a class="dropdown-item" href="/profile"><i class="dw dw-user1"></i> Profile</a>
 						<a class="dropdown-item" href="/logout"><i class="dw dw-logout"></i> Log Out</a>
 					</div>
 				</div>
@@ -278,7 +278,7 @@
 							</div>
 							<nav aria-label="breadcrumb" role="navigation">
 								<ol class="breadcrumb">
-									<li class="breadcrumb-item"><a href="dashboard.htmlstatic/">Home</a></li>
+									<li class="breadcrumb-item"><a href="/dashboard">Home</a></li>
 									<li class="breadcrumb-item active" aria-current="page">Profile</li>
 								</ol>
 							</nav>
@@ -289,28 +289,28 @@
 					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 mb-30">
 						<div class="pd-20 card-box height-100-p">
 							<div class="profile-photo">
-								<img src="static/vendors/images/photo1.jpgstatic/" alt="" class="avatar-photo">
+								<img src="static/vendors/images/photo1.jpg" alt="" class="avatar-photo">
 							</div>
-							<h5 class="text-center h5 mb-0">{{ request.session.log_user_fname }} {{ request.session.log_user_lname }}</h5>
+							<h5 class="text-center h5 mb-0">{{ session.log_user_fname }} {{ session.log_user_lname }}</h5>
 
 							<div class="profile-info">
 								<h5 class="mb-20 h5 text-blue">Contact Information</h5>
 								<ul>
 									<li>
 										<span>Email Address:</span>
-										{{ request.session.log_user_email }}
+										{{ session.log_user_email }}
 									</li>
 									<li>
 									<span>Gender:</span>
-										{{ request.session.log_user_gender }}
+										{{ session.log_user_gender }}
 									</li>
 									<li>
 										<span>Phone Number:</span>
-										{{ request.session.log_user_phone }}
+										{{ session.log_user_phone }}
 									</li>
 									<li>
 										<span>Address:</span>
-										{{ request.session.log_user_address }}
+										{{ session.log_user_address }}
 									</li>
 									
 								</ul>
@@ -327,11 +327,11 @@
 		</div>
 	</div>
 	<!-- js -->
-	<script src="static/vendors/scripts/core.jsstatic/"></script>
-	<script src="static/vendors/scripts/script.min.jsstatic/"></script>
-	<script src="static/vendors/scripts/process.jsstatic/"></script>
-	<script src="static/vendors/scripts/layout-settings.jsstatic/"></script>
-	<script src="static/src/plugins/cropperjs/dist/cropper.jsstatic/"></script>
+	<script src="static/vendors/scripts/core.js"></script>
+	<script src="static/vendors/scripts/script.min.js"></script>
+	<script src="static/vendors/scripts/process.js"></script>
+	<script src="static/vendors/scripts/layout-settings.js"></script>
+	<script src="static/src/plugins/cropperjs/dist/cropper.js"></script>
 	<script>
 		window.addEventListener('DOMContentLoaded', function () {
 			var image = document.getElementById('image');

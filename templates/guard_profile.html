@@ -99,7 +99,7 @@
 						<span class="user-icon">
 							<img src="static/vendors/images/photo1.jpg" alt="">
 						</span>
-						<span class="user-name">{{ request.session.log_fname }}</span>
+						<span class="user-name">{{ session.log_fname }}</span>
 					</a>
 					<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
 						<a class="dropdown-item" href="/gprofile"><i class="dw dw-user1"></i> Profile</a>
@@ -260,28 +260,28 @@
 							<div class="profile-photo">
 								<img src="static/vendors/images/photo1.jpg" alt="" class="avatar-photo">
 							</div>
-							<h5 class="text-center h5 mb-0">{{ request.session.log_fname }}  {{ request.session.log_lname }}</h5>
+							<h5 class="text-center h5 mb-0">{{ session.log_fname }}  {{ session.log_lname }}</h5>
 
 							<div class="profile-info">
 								<h5 class="mb-20 h5 text-blue">Contact Information</h5>
 								<ul>
 									<li>
 										<span>Email Address:</span>
-										{{ request.session.log_email }}
+										{{ session.log_email }}
 									</li>
 									<li>
 										<span>Gender:</span>
-										{{ request.session.log_gender }}
+										{{ session.log_gender }}
 									</li>
 
 									<li>
 										<span>Phone Number:</span>
-										{{ request.session.log_phone }}
+										{{ session.log_phone }}
 									</li>
 
 									<li>
 										<span>Address:</span>
-										{{ request.session.log_address }}
+										{{ session.log_address }}
 									</li>
 								</ul>
 							</div>

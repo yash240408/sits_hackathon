@@ -102,7 +102,7 @@
 						<span class="user-icon">
 							<img src="static/vendors/images/photo1.jpg" alt="">
 						</span>
-						<span class="user-name">{{ request.session.log_fname }}</span>
+						<span class="user-name">{{ session.log_fname }}</span>
 					</a>
 					<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
 						<a class="dropdown-item" href="/gprofile"><i class="dw dw-user1"></i> Profile</a>
@@ -273,13 +273,13 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label >First Name :</label>
-											<input type="text" name="fname" value="{{ request.session.log_fname }}" readonly class="form-control">
+											<input type="text" name="fname" value="{{ session.log_fname }}" readonly class="form-control">
 										</div>
 									</div>
 									<div class="col-md-6">
 										<div class="form-group">
 											<label >Last Name :</label>
-											<input type="text" name="lname" value="{{ request.session.log_lname }}" readonly class="form-control">
+											<input type="text" name="lname" value="{{ session.log_lname }}" readonly class="form-control">
 										</div>
 									</div>
 								</div>
@@ -287,13 +287,13 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label>Email Address :</label>
-											<input type="email" name="email" value="{{ request.session.log_email }}" readonly class="form-control">
+											<input type="email" name="email" value="{{ session.log_email }}" readonly class="form-control">
 										</div>
 									</div>
 									<div class="col-md-6">
 										<div class="form-group">
 											<label>Phone Number :</label>
-											<input type="text" name="phone" value="{{ request.session.log_phone }}" readonly class="form-control">
+											<input type="text" name="phone" value="{{ session.log_phone }}" readonly class="form-control">
 										</div>
 									</div>
 								</div>

@@ -101,10 +101,10 @@
 						<span class="user-icon">
 							<img src="static/vendors/images/photo1.jpg" alt="">
 						</span>
-						<span class="user-name"> {{ request.session.log_user_fname }}</span>
+						<span class="user-name"> {{ session.log_user_fname }}</span>
 					</a>
 					<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-						<a class="dropdown-item" href="profile.html"><i class="dw dw-user1"></i> Profile</a>
+						<a class="dropdown-item" href="/profile"><i class="dw dw-user1"></i> Profile</a>
 						<a class="dropdown-item" href=" /logout"><i class="dw dw-logout"></i> Log Out</a>
 					</div>
 				</div>
@@ -279,7 +279,7 @@
 							</div>
 							<nav aria-label="breadcrumb" role="navigation">
 								<ol class="breadcrumb">
-									<li class="breadcrumb-item"><a href="dashboard.html">Home</a></li>
+									<li class="breadcrumb-item"><a href="/dashboard">Home</a></li>
 									<li class="breadcrumb-item active" aria-current="page">Warning Data</li>
 								</ol>
 							</nav>
