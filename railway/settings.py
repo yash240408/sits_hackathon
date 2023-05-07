@@ -36,7 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'hackathon.apps.HackathonConfig',
+    'hackathon',
     'django.contrib.staticfiles',
 ]
 
