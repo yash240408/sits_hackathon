@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-{% load static %}<head>
+
+<head>
 	<!-- Basic Page Info -->
 	<meta charset="utf-8">
 	<title>RAILWAY ACCIDENT PREVENTION ADMIN DASHBOARD | Profile</title>
@@ -188,15 +189,17 @@
 
 	<div class="left-side-bar">
 		<div class="brand-logo">
-			<a href="dashboard.htmlstatic/">
-				<img src="static/vendors/images/gfgfhff.pngstatic/" alt="" class="dark-logo centric" width="90px" height="80px">
-				<img src="static/vendors/images/gfgfhff.pngstatic/" alt="" class="light-logo centric" width="90px" height="80px">
+			<a href="/dashboard">
+				<img src="static/vendors/images/gfgfhff.png" alt="" class="dark-logo centric" width="90px" height="80px">
+				<img src="static/vendors/images/gfgfhff.png" alt="" class="light-logo centric" width="90px" height="80px">
 			</a>
 			<div class="close-sidebar" data-toggle="left-sidebar-close">
 				<i class="ion-close-round"></i>
 			</div>
 		</div>
+
 		<div class="menu-block customscroll">
+
 			<div class="sidebar-menu">
 				<ul id="accordion-menu">
 					<li>
@@ -207,7 +210,7 @@
 							<span class="micon dw dw-house-1"></span><span class="mtext">Home</span>
 						</a>
 						<ul class="submenu">
-							<li><a href="dashboard.htmlstatic/">DashBoard</a></li>
+							<li><a href="/dashboard">DashBoard</a></li>
 						</ul>
 					</li>
 					<li class="dropdown">
@@ -215,16 +218,17 @@
 							<span class="micon dw dw-edit2"></span><span class="mtext">Guard / Complain</span>
 						</a>
 						<ul class="submenu">
-							<li><a href="form-basic.htmlstatic/">Add Guard / Admin</a></li>
-							<li><a href="form-wizard.htmlstatic/">View Complain</a></li>
+							<li><a href="/add">Add Guard</a></li>
+							<li><a href="/status">View Complain</a></li>
 						</ul>
 					</li>
 					<li class="dropdown">
+
 						<a  class="dropdown-toggle">
 							<span class="micon dw dw-library"></span><span class="mtext">Warning Table</span>
 						</a>
 						<ul class="submenu">
-							<li><a href="datatable.htmlstatic/">Warning Data</a></li>
+							<li><a href="/warning">Warning Data</a></li>
 						</ul>
 					</li>
 					<li class="dropdown">
@@ -232,10 +236,10 @@
 							<span class="micon dw dw-analytics-21"></span><span class="mtext">Sensor's Data</span>
 						</a>
 						<ul class="submenu">
-							<li><a href="Human Detection.htmlstatic/">Human Presence</a></li>
-							<li><a href="Obstacle detection.htmlstatic/">Obstacle Detection</a></li>
-							<li><a href="Distance Calculator.htmlstatic/">Distance Calculator</a></li>
-							<li><a href="Level_crossing.htmlstatic/">Level Crossing Status</a></li>
+							<li><a href="/human">Human Presence</a></li>
+							<li><a href="/obstacle">Obstacle Detection</a></li>
+							<li><a href="/distance">Distance Calculator</a></li>
+							<li><a href="/crossing">Level Crossing Status</a></li>
 						</ul>
 					</li>
 					<li class="dropdown">
@@ -243,13 +247,13 @@
 							<span class="micon dw dw-user-13"></span><span class="mtext">Profile</span>
 						</a>
 						<ul class="submenu">
-							<li><a href="profile.htmlstatic/">Profile</a></li>
-							<li><a href="Attendance_Table.htmlstatic/">Log</a></li>
+							<li><a href="/profile">Profile</a></li>
+							<li><a href="/attendance">Log</a></li>
 							<li><a href=" /logout ">Logout</a></li>
 						</ul>
 					</li>
 					<li>
-						<a href="sitemap.htmlstatic/" class="dropdown-toggle no-arrow">
+						<a href="/sitemap" class="dropdown-toggle no-arrow">
 							<span class="micon dw dw-diagram"></span><span class="mtext">Sitemap</span>
 						</a>
 					</li>

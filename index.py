@@ -63,7 +63,7 @@ def login():
                 session['log_address'] = uaddress
                 session['log_uhex'] = uhex
                 session['log_phone'] = uphone
-                return redirect(guard_dashboard)
+                return redirect("/gdashboard")
 
             # This will store information of admin.
             else:
@@ -99,7 +99,7 @@ def login():
 def admin_dashboard():
     try:
         if session['log_user_email'] is None:
-            return redirect(login)
+            return redirect("/login")
         else:
             records = {}
             url = "https://espnodewebsite.000webhostapp.com/API/fetchwarningsensordataapi.php"
@@ -139,7 +139,7 @@ def profile():
 def guard_profile():
     try:
         if session["log_email"] is None:
-            return redirect(login)
+            return redirect("/login")
         else:
             return render_template('guard_profile.html')
     except:
@@ -150,7 +150,7 @@ def guard_profile():
 def admin_map():
     try:
         if session["log_user_email"] is None:
-            return redirect(login)
+            return redirect("/login")
         else:
             return render_template('sitemap.html')
     except:
@@ -194,7 +194,7 @@ def guard_logout():
 def admin_crossing():
     try:
         if session['log_user_email'] is None:
-            return redirect(login)
+            return redirect("/login")
         else:
             url = "https://espnodewebsite.000webhostapp.com/API/fetchldrsensorapi.php"
             response = requests.get(url=url)
@@ -221,7 +221,7 @@ def admin_crossing():
 def admin_obstacle():
     try:
         if session["log_user_email"] is None:
-            return redirect(login)
+            return redirect("/login")
         else:
             url = "https://espnodewebsite.000webhostapp.com/API/fetchirsensordata.php"
             response = requests.get(url=url)
@@ -247,7 +247,7 @@ def admin_obstacle():
 def admin_human():
     try:
         if session["log_user_email"] is None:
-            return redirect(login)
+            return redirect("/login")
         else:
             url = "https://espnodewebsite.000webhostapp.com/API/fetchpirsensordata.php"
             response = requests.get(url=url)
@@ -273,7 +273,7 @@ def admin_human():
 def admin_distance():
     try:
         if session['log_user_email'] is None:
-            return redirect(login)
+            return redirect("/login")
         else:
             url = "https://espnodewebsite.000webhostapp.com/API/fetchultrasonic.php"
             response = requests.get(url=url)
@@ -299,7 +299,7 @@ def admin_distance():
 def admin_warning():
     try:
         if session['log_user_email'] is None:
-            return redirect(login)
+            return redirect("/login")
         else:
             url = "https://espnodewebsite.000webhostapp.com/API/fetchwarningsensordataapi.php"
             response = requests.get(url=url)
@@ -315,7 +315,7 @@ def admin_warning():
 def guard_dashboard():
     try:
         if session['log_email'] is None:
-            return redirect(login)
+            return redirect("/login")
         else:
             records = {}
             url = "https://espnodewebsite.000webhostapp.com/API/fetchwarningsensordataapi.php"
@@ -486,7 +486,7 @@ def admin_status():
 def admin_attendance():
     try:
         if session["log_user_email"] is None:
-            return redirect(login)
+            return redirect("/login")
         else:
             url = "https://espnodewebsite.000webhostapp.com/API/fetchattendance.php"
             response = requests.get(url=url)
@@ -502,17 +502,17 @@ def admin_attendance():
 def guard_complain():
     try:
         if session["log_email"] is None:
-            return redirect(login)
+            return redirect("/login")
         else:
             if request.method == "POST":
-                fname = request.POST.get("fname")
-                lname = request.POST.get("lname")
-                email = request.POST.get("email")
-                phone = request.POST.get("phone")
-                state=request.POST.get("state")
-                sensor_type=request.POST.get("sensortype")
-                company_name=request.POST.get("companyname")
-                problem = request.POST.get("problem")
+                fname = request.form.get("fname")
+                lname = request.form.get("lname")
+                email = request.form.get("email")
+                phone = request.form.get("phone")
+                state=request.form.get("state")
+                sensor_type=request.form.get("sensortype")
+                company_name=request.form.get("companyname")
+                problem = request.form.get("problem")
                 url = "https://espnodewebsite.000webhostapp.com/API/addcomplaint.php"
                 last_val1=[]
                 params = {

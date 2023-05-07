@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-{% load static %}
 <head>
 	<!-- Basic Page Info -->
 	<meta charset="utf-8">
@@ -103,7 +102,7 @@
 						<span class="user-name">{{ request.session.log_fname }}</span>
 					</a>
 					<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-						<a class="dropdown-item" href="guard_profile.html"><i class="dw dw-user1"></i> Profile</a>
+						<a class="dropdown-item" href="/gprofile"><i class="dw dw-user1"></i> Profile</a>
 						<a class="dropdown-item" href=" /glogout  "><i class="dw dw-logout"></i> Log Out</a>
 					</div>
 				</div>
@@ -188,7 +187,7 @@
 
 	<div class="left-side-bar">
 		<div class="brand-logo">
-			<a href="guard_dashboard.html">
+			<a href="/gdashboard">
 				<img src="static/vendors/images/gfgfhff.png" alt="" class="dark-logo centric" width="90px" height="80px">
 				<img src="static/vendors/images/gfgfhff.png" alt="" class="light-logo centric" width="90px" height="80px">
 			</a>
@@ -207,7 +206,7 @@
 							<span class="micon dw dw-house-1"></span><span class="mtext">Home</span>
 						</a>
 						<ul class="submenu">
-							<li><a href="guard_dashboard.html">DashBoard</a></li>
+							<li><a href="/gdashboard">DashBoard</a></li>
 						</ul>
 					</li>
 					<li class="dropdown">
@@ -215,7 +214,7 @@
 							<span class="micon dw dw-edit2"></span><span class="mtext">Complain</span>
 						</a>
 						<ul class="submenu">
-							<li><a href="guard_form-wizard.html">Complain Detail</a></li>
+							<li><a href="/complain">Complain Detail</a></li>
 						</ul>
 					</li>
 
@@ -224,7 +223,7 @@
 							<span class="micon dw dw-user-13"></span><span class="mtext">Profile</span>
 						</a>
 						<ul class="submenu">
-							<li><a href="guard_profile.html">Profile</a></li>
+							<li><a href="/gprofile">Profile</a></li>
 							<li><a href=" /glogout "> Log Out</a></li>
 						</ul>
 					</li>
@@ -248,7 +247,7 @@
 							</div>
 							<nav aria-label="breadcrumb" role="navigation">
 								<ol class="breadcrumb">
-									<li class="breadcrumb-item"><a href="guard_dashboard.html">Home</a></li>
+									<li class="breadcrumb-item"><a href="/gdashboard">Home</a></li>
 									<li class="breadcrumb-item active" aria-current="page">Profile</li>
 								</ol>
 							</nav>
