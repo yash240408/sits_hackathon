@@ -1,9 +1,10 @@
 import random,base64
 from django.contrib import messages
-import requests, matplotlib.pyplot as plt
+# import requests, matplotlib.pyplot as plt
 from django.shortcuts import redirect,render
 
 from django.core.exceptions import ObjectDoesNotExist
+import requests
 
 def login(request):
     if request.method == 'POST':
